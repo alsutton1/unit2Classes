@@ -1,4 +1,5 @@
 import javax.swing.JFrame;
+import java.awt.Color;
 
 /**
  * Class that contains the main method for the program and creates the frame containing the component.
@@ -8,16 +9,14 @@ import javax.swing.JFrame;
  */
 public class CityscapeViewer
 {
-    /**
-     * main method for the program which creates and configures the frame for the program
-     *
-     */
     public static void main(String[] args)
     {
         // create and configure the frame (window) for the program
         JFrame frame = new JFrame();
         
-        frame.setSize(800 /* x */, 600 /* y */);
+        //create city frame
+        frame.setSize(1000, 600);
+        frame.getContentPane().setBackground(Color.CYAN);
         frame.setTitle("Cityscape");
         frame.setDefaultCloseOperation(JFrame.EXIT_ON_CLOSE);
         
