@@ -6,6 +6,7 @@ import java.awt.Color;
 
 public class CityscapeComponent extends JComponent
 {
+    // calls upon the objects to create the buildings, sun, and ground
     public void paintComponent(Graphics g)
     {
         Graphics2D g2 = (Graphics2D) g;
@@ -19,12 +20,12 @@ public class CityscapeComponent extends JComponent
         g2.setColor(Color.GREEN);
         ground.draw(g2);
         
-        //create the randomly positioned sun
+        //creates the randomly positioned sun
         Sun sun = new Sun();
         g2.setColor(Color.YELLOW);
         sun.draw(g2);
         
-        //create set number of buildings
+        //creates the set number of buildings (7)
         Building building1 = new Building(25);
         Building building2 = new Building(150);
         Building building3 = new Building(270);

@@ -6,10 +6,12 @@ import java.awt.Color;
 
 public class Building
 {
+    //creates the building's random height and set width
     private int x, y;
     
     public Building(int xx)
     {
+        //the code for the random height
         Random num = new Random();
         y = num.nextInt(200)+51;
         x = xx;
@@ -17,15 +19,18 @@ public class Building
     
     public void draw(Graphics2D g2)
     {   
+        //creates the background rectangle representing the building, which is filled
         g2.setColor(Color.BLACK);
         int width = 100;
         int height = 450-y;
         Rectangle r1 = new Rectangle(x, y, width, height);
         g2.fill(r1);
         
+        //calculates the height of the windows for the building
         int windowHeight = height/10;
         int windowy = windowHeight;
         
+        //creates the set number of windows (18), which are filled
         g2.setColor(Color.YELLOW);
         Rectangle w1 = new Rectangle(x+5, y+5, 25, windowHeight);
         g2.fill(w1);
